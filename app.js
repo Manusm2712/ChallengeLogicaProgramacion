@@ -21,3 +21,14 @@ function agregarAmigo(){
     input.value = ""; //Limpiar el campo
 }
 
+//funcion mostrar lista de amigos
+function mostrarLista(){
+    const lista = document.getElementById("listaAmigos");
+    lista.innerHTML =""; //limpiar antes de volver a pintar
+
+    amigos.forEach(amigo =>{
+        const li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+    });
+}
